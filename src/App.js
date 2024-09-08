@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import LoginPage from "../src/pages/LoginPage";
+import { UserContextProvider } from "./components/ui/UserContext";
+import Layout from "./components/ui/Layout";
+import IndexPage from "./pages/IndexPage";
+import CreatePost from "./pages/CreatePost";
+import PostPage from "./pages/PostPage";
+import GetByType from "./pages/SortByType";
+import SearchPage from "./pages/SearchPage"; // Import the SearchPage component
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContextProvider>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<IndexPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/create" element={<CreatePost />} />
+          <Route path="/post/:id" element={<PostPage />} />
+          <Route path="/posts/type/:type" element={<GetByType />} />
+          <Route path="/search" element={<SearchPage />} /> {/* Add this route */}
+        </Route>
+      </Routes>
+    </UserContextProvider>
   );
 }
 

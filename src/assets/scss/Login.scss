@@ -1,0 +1,58 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Inter', sans-serif; // Đảm bảo font được tải từ Google Fonts hoặc tương tự
+
+    .login_form {
+        background-color: #fff;
+        padding: 80px; // Giảm padding để form trông cân bằng hơn
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Giảm độ mờ của bóng đổ
+        width: 350px; // Tăng chiều rộng một chút cho sự thoải mái
+
+        .form_group {
+            margin-bottom: 20px; // Giảm khoảng cách giữa các trường nhập
+
+            label {
+                font-size: 14px; // Tăng kích thước font cho dễ đọc
+                display: block;
+                margin-bottom: 5px;
+                font-weight: 400; // Font-weight thường hơn để chữ dễ đọc hơn
+            }
+
+            input {
+                width: 100%;
+                padding: 12px; // Giảm padding để các trường nhập có vẻ cân đối hơn
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-size: 14px; // Đặt kích thước font cho các trường nhập
+                box-sizing: border-box; // Đảm bảo padding không làm tăng kích thước tổng thể của input
+            }
+
+            button {
+                width: 100%;
+                padding: 12px; // Tăng padding để nút bấm dễ sử dụng hơn
+                background-color: #007bff;
+                border: none;
+                border-radius: 4px;
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s ease; // Thêm hiệu ứng chuyển đổi màu nền
+
+                &:hover {
+                    background-color: #0056b3;
+                }
+            }
+        }
+    }
+
+    .error_message {
+        color: red;
+        margin-bottom: 10px;
+        font-size: 12px; // Kích thước font nhỏ hơn cho thông báo lỗi
+        text-align: center; // Căn giữa thông báo lỗi
+    }
+}

@@ -1,0 +1,112 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+
+    .post-page {
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        /* Cho phép cuộn nếu nội dung dài */
+
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+
+            h5 {
+                font-size: 20px;
+                margin: 0;
+            }
+
+            .author {
+                margin-top: 10px;
+                font-size: 15px;
+                font-style: italic;
+            }
+
+            .time {
+                font-size: 12px;
+            }
+
+            .description {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 15px;
+
+                .pdes {
+                    font-weight: 500;
+                    text-decoration: underline;
+                }
+
+                .ades {
+                    margin-left: 10px;
+                    font-weight: 300;
+                }
+            }
+
+            .content {
+                margin-top: 20px;
+                font-weight: 300;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .edit {
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        /* Cho phép cuộn nếu nội dung dài */
+
+        h5 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+
+            input {
+                width: calc(100% - 20px);
+                /* Căn chỉnh để phù hợp với padding */
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 12px;
+                margin: 10px 0;
+            }
+
+            .reactquill {
+                margin-top: 20px;
+            }
+
+            .btn-save {
+                padding: 10px;
+                border: none;
+                color: #fff;
+                background-color: #3099ff;
+                cursor: pointer;
+                border-radius: 4px;
+                font-size: 14px;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #1e80d4;
+                }
+            }
+        }
+    }
+}

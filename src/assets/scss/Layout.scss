@@ -1,0 +1,14 @@
+/* Layout.scss */
+.layout-container {
+    display: flex;
+    height: 100vh;
+    /* Chiếm toàn bộ chiều cao màn hình */
+}
+
+.main-content {
+    flex-grow: 1;
+    /* Chiếm phần không gian còn lại */
+    /* Thêm padding cho nội dung */
+    overflow-y: auto;
+    /* Cho phép cuộn dọc nếu nội dung quá lớn */
+}

@@ -1,0 +1,215 @@
+/* HeaderLeft.scss */
+* {
+    font-family: Inter, sans-serif;
+}
+
+$default-background-color: #fff;
+$none-background-color: #f5f5f5;
+$work-background-color: #65d9e6;
+$personal-background-color: #fe696d;
+$study-background-color: #ffd932;
+
+.menu-container {
+    width: 300px;
+    height: 100%;
+    background-color: $default-background-color;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.menu-above {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        border-bottom: 1px solid #cccccc;
+
+        p {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+
+        .btn-search {
+            border: none;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background-color: #65d9e6;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .search {
+            border-radius: 30px;
+            padding: 5px;
+            border: none;
+            font-size: 12px;
+            font-weight: 300;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.menu-middle {
+    padding: 20px;
+
+    &__tasks {
+        .task-title {
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .task {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+
+            img {
+                width: 16px;
+                height: 16px;
+                margin-right: 15px;
+            }
+
+            &-count {
+                background-color: $default-background-color;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: #ebebeb;
+                color: black;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__lists {
+        .list-title {
+            font-size: 12px;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .list {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+
+            .color {
+                width: 20px;
+                height: 20px;
+                border-radius: 4px;
+                margin-right: 15px;
+            }
+
+            &-count {
+                margin-left: 10px;
+                background-color: $default-background-color;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: #ebebeb;
+                font-weight: 600;
+                color: black;
+            }
+        }
+    }
+}
+
+.menu-under {
+    margin-top: 220px;
+    padding: 0px;
+
+    &__logout {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        .link {
+            display: flex;
+
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 15px;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__settings {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+        }
+    }
+}
+
+/* Định nghĩa màu sắc cho các loại bài viết */
+.javascript .color {
+    background-color: $study-background-color; // Vàng
+}
+
+.html .color {
+    background-color: $personal-background-color; // Đỏ
+}
+
+.css .color {
+    background-color: $work-background-color; // Xanh
+}
+
+.others .color {
+    background-color: #cccccc; // Xám
+}

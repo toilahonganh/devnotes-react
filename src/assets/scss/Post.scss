@@ -1,0 +1,105 @@
+$post-background-color: #fff; // Màu nền mặc định
+$none-background-color: #f5f5f5; // Màu nền cho 'none'
+$work-background-color: #65d9e6; // Màu nền cho 'work'
+$personal-background-color: #fe696d; // Màu nền cho 'personal'
+$study-background-color: #ffd932; // Màu nền cho 'study'
+
+.post {
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px solid #f5f5f5;
+    overflow: hidden;
+    background-color: $post-background-color; // Màu nền mặc định
+    margin-bottom: 20px;
+
+    .delete {
+        position: relative;
+        left: 95%;
+        width: 18px;
+        bottom: 10px;
+        font-size: 15px;
+    }
+
+    &:hover {
+        box-shadow: 0 1px 8px #f5f5f5;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit; // Đảm bảo màu chữ không thay đổi khi hover
+    }
+
+    &.others {
+        background-color: $none-background-color;
+    }
+
+    &.css {
+        background-color: $work-background-color;
+    }
+
+    &.html {
+        background-color: $personal-background-color;
+    }
+
+    &.javascript {
+        background-color: $study-background-color;
+    }
+}
+
+.texts {
+    padding: 12px;
+}
+
+.title {
+    margin-bottom: 10px;
+
+    p {
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+    }
+}
+
+.content {
+    margin-bottom: 12px;
+
+    p {
+        font-size: 12px;
+        color: #555; // Màu chữ của nội dung
+    }
+
+    .description {
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #777;
+
+    .author {
+        font-size: 12px;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+            color: #65d9e6; // Màu sắc khi hover
+        }
+    }
+
+    .type {
+        font-size: 12px;
+    }
+
+
+
+    time {
+        font-style: italic;
+        font-size: 12px;
+    }
+}
